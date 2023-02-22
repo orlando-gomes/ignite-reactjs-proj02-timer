@@ -32,9 +32,9 @@ export const HeaderContainer = styled.header`
         color: ${(props) => props.theme['green-500']};
       }
 
-      /* :focus {
+      &:focus {
         box-shadow: 0 0 0 0;
-      } */
+      }
     }
   }
 `
