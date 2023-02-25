@@ -36,11 +36,15 @@ export function Home() {
     },
   })
 
-  const { handleSubmit, watch /* formState, */ /* reset */ } =
-    newCycleFormMethods
+  const { handleSubmit, watch, /* formState, */ reset } = newCycleFormMethods
 
   // Assim acessamos os erros
   // console.log(formState.errors)
+
+  function handleCreateNewCycle(data: NewCycleFormData) {
+    createNewCycle(data)
+    reset()
+  }
 
   const task = watch('task')
   const minutesAmount = watch('minutesAmount')
@@ -48,7 +52,7 @@ export function Home() {
 
   return (
     <HomeContainer>
-      <form onSubmit={handleSubmit(createNewCycle)} action="">
+      <form onSubmit={handleSubmit(handleCreateNewCycle)} action="">
         <FormProvider {...newCycleFormMethods}>
           <NewCycleForm />
         </FormProvider>
