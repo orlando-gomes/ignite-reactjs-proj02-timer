@@ -49,7 +49,7 @@ export function History() {
                 </tr>
               )
             })}
-            <tr>
+            {/* <tr>
               <td>Tarefa</td>
               <td>20 minutos</td>
               <td>Há 2 meses</td>
@@ -64,7 +64,7 @@ export function History() {
               <td>
                 <Status statusColor="green">Concluído</Status>
               </td>
-            </tr>
+            </tr> */}
           </tbody>
         </table>
       </HistoryList>
